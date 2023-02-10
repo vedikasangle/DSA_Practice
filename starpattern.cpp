@@ -15,7 +15,7 @@ int main(){
     }
     int star = 0 ; 
     while(star<rowno){
-        cout<<" * ";
+        cout<<"* ";
         star = star + 1;
     }
     cout<<endl;
