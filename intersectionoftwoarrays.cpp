@@ -1,70 +1,43 @@
 #include<iostream>
-using namespace std;
-
+using namespace std ;
 
 int main(){
-    int arr1[100000];
+    int arr1[100000] ;
+    int arr2[100000];
     int n ; 
     cin>>n ; 
-    
-    int arr2[100000];
-    int m ; 
+
+    int m ;
     cin>>m;
 
-      
-    for(int i = 0 ; i<=n-1;i++){
-        cin>>arr1[i];
+    for(int l = 0 ; l<=n-1 ; l++){
+        cin>>arr1[l];
     }
 
-    for(int j = 0 ; j<=m-1 ; j++){
-        cin>>arr2[j];
+    for(int k = 0 ; k<=m-1 ; k++){
+        cin>>arr2[k];
     }
 
+// 5
+// 3 
+// 3 4 5 6 7 
+// 6 7 8 
+// 6 
+    //n = 4 and m = 2 
+    //j-->m and n --> i 
+    int j = 0 ;
+    while(j<=m-1){//0<=1 ->yes
+          int i = 0 ;
+    while(i<=n-1){//0<=3 1<=3
+        if(arr2[j]==arr1[i]){//no yes yes 
 
-    // for(int i = 0 ; i<=n-1;i++){
-    //     cout<<arr1[i]<<" ";
-    // }
-
-    // cout<<endl;
-
-
-    // for(int j = 0 ; j<=m-1 ; j++){
-    //     cout<<arr2[j]<<" ";
-    // }
-
-    // //n = 3 , m = 3 
-    
-    
-
-    
-    // while(q<m){//0<4 and 2<5 
-    // int p = 0 ;
-    // int q = 0 ;  
-    // if(arr1[p]==arr2[q]){//arr1[0] == arr2[2] -> no  
-    //     cout<<arr2[q];//
-    //     q++;
-    // }
-    //    p++;
-    // //    q++;
-    //     //2
-    //     // p=0;
-    // }
-
-
-
-    int p = 0 ;
-    while(p<=n-1){
-    int q = 0 ; 
-    while(q<=m-1){
-    if(arr1[p]==arr2[q]){//arr1[0] == arr2[2] -> no  
-        cout<<arr2[q];//
-        q++;
+            cout<<arr2[j]<<" ";//2
+            break;//if one element is matched we need not check further 
+        }
+            i++;//1 2
     }
+    j++; //1
     }
-    p++;
-    }
-
-
-    
-    return 0;
+    return 0 ; 
 }
+
